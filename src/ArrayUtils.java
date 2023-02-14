@@ -37,5 +37,25 @@ public class ArrayUtils {
 
         return -1;
     }
+
+    public static int[] getSubArray(int[] array, int beginIndex, int endIndex) {
+        if (array == null || array.length == 0 || beginIndex > endIndex)
+            throw new IllegalArgumentException("Enter correct data");
+
+        if (endIndex > array.length)
+            endIndex = array.length;
+
+        int arrayLength = endIndex - beginIndex;
+
+        int[] subArray = new int[arrayLength];
+        int count = 0;
+
+        for (int i = beginIndex; i < endIndex; i++) {
+            subArray[count] = array[i];
+            count++;
+        }
+
+        return subArray;
+    }
   }
 
