@@ -57,5 +57,18 @@ public class ArrayUtils {
 
         return subArray;
     }
+
+    public static int[] getArrayOnPage(int[] array, int pageNumber, int countOfElements) {
+        if (array == null || array.length == 0 || pageNumber < 1 || countOfElements < 0)
+            throw new IllegalArgumentException("Enter correct data.");
+
+        int countOfElementsOnPreviousPage = (pageNumber - 1) * countOfElements;
+        int countOfElementsOnNecessaryPage = pageNumber * countOfElements;
+
+        if (pageNumber * countOfElements > array.length)
+            countOfElementsOnNecessaryPage = array.length;
+
+        return getSubArray(array, countOfElementsOnPreviousPage, countOfElementsOnNecessaryPage);
+    }
   }
 
