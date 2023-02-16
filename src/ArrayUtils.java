@@ -58,7 +58,7 @@ public class ArrayUtils {
         return subArray;
     }
 
-    public static int[] getArrayOnPage(int[] array, int pageNumber, int countOfElements) {
+    public static int[] getElementsOnPage(int[] array, int pageNumber, int countOfElements) {
         if (array == null || array.length == 0 || pageNumber < 1 || countOfElements < 0)
             throw new IllegalArgumentException("Enter correct data.");
 
