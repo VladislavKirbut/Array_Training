@@ -1,3 +1,5 @@
+package by.teachmeskills.util;
+
 import java.util.Scanner;
 
 public class UserInputUtils {

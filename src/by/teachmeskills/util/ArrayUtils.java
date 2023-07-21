@@ -1,3 +1,5 @@
+package by.teachmeskills.util;
+
 public class ArrayUtils {
 
     public static double getAverageNumber(int[] array) {
